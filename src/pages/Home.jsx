@@ -10,13 +10,13 @@ import CartDrawer from "../components/CartDrawer.jsx";
 
 export default function Home() {
     const navigate = useNavigate();
-    const cart = useCart(); // ✅ custom hook usado
-    const [query, setQuery] = useState(""); // ✅ useState (criterio 2)
+    const cart = useCart();
+    const [query, setQuery] = useState("");
 
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
         if (!q) return BOOKS;
-        return BOOKS.filter((b) => b.title.toLowerCase().includes(q)); // ✅ filtra por título
+        return BOOKS.filter((b) => b.title.toLowerCase().includes(q));
     }, [query]);
 
     const openBook = (id) => navigate(`/book/${id}`);
