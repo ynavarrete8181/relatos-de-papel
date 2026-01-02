@@ -1,0 +1,298 @@
+:root {
+    font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f6f7fb;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 16px;
+    padding: 16px;
+    align-items: start;
+}
+
+.layout__main {
+    min-width: 0;
+}
+
+.layout__side {
+    position: sticky;
+    top: 16px;
+    height: fit-content;
+}
+
+.header {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header__right {
+    max-width: 520px;
+}
+
+.search__input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+}
+
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.book-card {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 10px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.book-card__img {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.book-card__title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.book-card__author {
+    margin: 6px 0 0;
+    color: #555;
+    font-size: 13px;
+}
+
+.book-card__price {
+    margin: 10px 0 0;
+    font-weight: 700;
+}
+
+.cart {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.cart__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart__title {
+    margin: 0;
+}
+
+.cart__badge {
+    display: inline-grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+}
+
+.cart__body {
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.cart__empty {
+    color: #666;
+    margin: 0;
+}
+
+.cart__footer {
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+}
+
+.cart__total {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Cart item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.cart-item__title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cart-item__meta {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.btn {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #111;
+    background: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn--primary {
+    background: #111;
+    color: #fff;
+}
+
+.btn--ghost {
+    border-color: #ddd;
+}
+
+.btn--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.empty {
+    color: #666;
+}
+
+.book {
+    padding: 16px;
+}
+
+.book__content {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.book__img {
+    width: 240px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.book__info {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.book__title {
+    margin: 0;
+}
+
+.book__author {
+    margin: 6px 0 0;
+    color: #555;
+}
+
+.book__desc {
+    margin: 12px 0;
+    color: #333;
+}
+
+.book__price {
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+/* Checkout (BEM) */
+.checkout {
+    padding: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.checkout__header {
+    display: 1flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.checkout__title {
+    margin: 0;
+}
+
+.checkout__empty {
+    color: #666;
+}
+
+.checkout__list {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.checkout-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.checkout-item__title {
+    margin: 0;
+    font-weight: 700;
+}
+
+.checkout-item__meta {
+    margin: 0;
+    color: #555;
+}
+
+.checkout__footer {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkout__total {
+    margin: 0;
+    font-weight: 800;
+}
